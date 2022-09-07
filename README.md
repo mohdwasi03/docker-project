@@ -29,6 +29,7 @@ It shall copy info.sql from local machine to our file structure in ec2-instance
          
                "vi /tmp/project/docker-compose.yml"
 
+
 It shall create a docker-compose.yml file and then copy the content and save it.
 docker-compose.yml
 ------------------------------------------------------
