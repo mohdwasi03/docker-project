@@ -31,6 +31,7 @@ It shall copy info.sql from local machine to our file structure in ec2-instance
 
 
 It shall create a docker-compose.yml file and then copy the content and save it.
+
 docker-compose.yml
 ------------------------------------------------------
 
