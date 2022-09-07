@@ -35,31 +35,31 @@ It shall create a docker-compose.yml file and then copy the content and save it.
 docker-compose.yml
 ------------------------------------------------------
 
-version: '3.7'
+       version: '3.7'
 
-services:
-    postgres-container:
-        restart: unless-stopped
-        image: postgres:latest
-        environment:
-            POSTGRES_USER: ${POSTGRES_USER:-wasi}
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-12345}
-            POSTGRES_DB: ${POSTGRES_DB:-data}
-        ports:
-            - 5432:5432
-        volumes:
-            - /var/lib/postgresql/data
-            - ./data/info.sql:/docker-entrypoint-initdb.d/info.sql
+       services:
+           postgres-container:
+               restart: unless-stopped
+               image: postgres:latest
+               environment:
+                   POSTGRES_USER: ${POSTGRES_USER:-wasi}
+                   POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-12345}
+                   POSTGRES_DB: ${POSTGRES_DB:-data}
+               ports:
+                   - 5432:5432
+               volumes:
+                   - /var/lib/postgresql/data
+                   - ./data/info.sql:/docker-entrypoint-initdb.d/info.sql
 
-    jupyter-notebook-container:
-        restart: unless-stopped
-        image: jupyter/datascience-notebook:latest
-        environment:
-            JUPYTER_TOKEN: 12345
-        volumes:
-            - /home/joyves/work
-        ports:
-            - 8080:8888
+           jupyter-notebook-container:
+               restart: unless-stopped
+               image: jupyter/datascience-notebook:latest
+               environment:
+                   JUPYTER_TOKEN: 12345
+               volumes:
+                   - /home/joyves/work
+               ports:
+                   - 8080:8888
 
 
 -------------------------------------------------------------
