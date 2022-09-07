@@ -10,8 +10,8 @@
  
 1) create a ec2-instance and enable password authentication
 Here  I am using Amazon-linux-machine, so we use yum repository .run the following commands to install docker:
-                    "yum install docker -y"
-                    "docker service start"
+                                   "yum install docker -y"
+                                   "docker service start"
 It installs docker and start the docker service.
  
 
